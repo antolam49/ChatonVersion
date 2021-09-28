@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Les Chatons du dossier {{ dossier }}
+{% endblock %}
+{% block body %}
+    <h1>Dossier : <i>{{ dossier }}</i></h1>
+    <div class="row">
+        {% for chaton in photos %}
+           {%  include "macron_pitié/_chaton.html.twig" %}
+        {% endfor %}
+    </div>
+{% endblock %}
